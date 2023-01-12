@@ -35,14 +35,14 @@ Direct loss estimation (DLE) is a fairly simple concept. During the training of 
 
 There exists, currently a package to do this their explanation of the logic is below (from [NannyML](https://nannyml.readthedocs.io/en/main/how_it_works/performance_estimation.html)):
 
-Let’s denote with $$f$$ the monitored model and $$h$$ the nanny model. Let’s assume we are interested in estimating mean absolute error (MAE) of $$f$$ for some analysis data for which targets are not available. $$f$$ was trained on train data and used on reference data providing $$f(X_{reference})$$ predictions. Targets for reference set $$y_{reference}$$ are available. The algorithm runs as follows:
+Let’s denote with $f$ the monitored model and $h$ the nanny model. Let’s assume we are interested in estimating mean absolute error (MAE) of $f$ for some analysis data for which targets are not available. $f$ was trained on train data and used on reference data providing $f(X_{reference})$ predictions. Targets for reference set $y_{reference}$ are available. The algorithm runs as follows:
 
-1. For each observation of reference data calculate loss which in case of MAE is absolute error of $$f$$, i.e. $$AE_{reference}= |y_{reference}-f(X_{reference})$$.
+1. For each observation of reference data calculate loss which in case of MAE is absolute error of $f$, i.e. $AE_{reference}= |y_{reference}-f(X_{reference})$.
 
-2. Train a nanny model on reference data. As features use the monitored model features $$X_{reference}$$ and monitored model predictions $$f(X_{reference})$$ . The target is absolute error $$AE_{reference}$$ calculated in previous step. So $$\hat{$$AE_{reference}} = h(X,f(X))$$ .
+2. Train a nanny model on reference data. As features use the monitored model features $X_{reference}$ and monitored model predictions $f(X_{reference})$ . The target is absolute error $AE_{reference}$ calculated in previous step. So $\hat{AE_{reference}} = h(X,f(X))$ .
 
-3. Estimate performance of child model on analysis data: estimate absolute error for each observation $$\hat{$$AE_{reference}}$$
- with $$h$$ and calculate mean of $$\hat{$$AE_{reference}}$$ to get MAE.
+3. Estimate performance of child model on analysis data: estimate absolute error for each observation $\hat{AE_{reference}}$
+ with $h$ and calculate mean of $\hat{AE_{reference}}$ to get MAE.
 
 
 ## Simple Example
