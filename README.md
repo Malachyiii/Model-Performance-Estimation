@@ -20,11 +20,11 @@ In a scenario where you have additional ground truth to train on, this can be mi
 There are three possible solutions to this problem.
 
 1. Expend effort and resources to source additional ground truth:
-  1. Scraping websites
-  2. Using effort to source publicly available data
-  3. Purchase data from or partner with outside companies to acquire ground truth data sets
+  * Scraping websites
+  * Using effort to source publicly available data
+  * Purchase data from or partner with outside companies to acquire ground truth data sets
 2. Simulate ground truth:
-  1. Utilizing past data, methods such as Monte Carlo or Generative Adversarial Networks could be used to create “ground truth”
+  * Utilizing past data, methods such as Monte Carlo or Generative Adversarial Networks could be used to create “ground truth”
 3. Finding methods to detect and mitigate data drift that do not require ground truth. 
 
 While options 1 & 2 are both viable, and the ideal scenario may be a combination of the three, this page will focus on the third option.
