@@ -2,7 +2,7 @@
 
 # The Problem
 
-The biggest problem facing any potentially modeling approach for foot traffic going forward is a lack of ground truth. The problem manifests in two forms: 
+The biggest problem facing any potentially modeling approach for a deployed modelis a lack of ground truth. The problem manifests in two forms: 
 
 * Firstly a lack of ground truth means we do not have the data to fine tune our model weights when we receive a new source of supply. 
 * Secondly, we have the issue of data drift
